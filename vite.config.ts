@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './client/src'),
+      '@': path.resolve(__dirname, './src'),
     },
   },
   server: {
@@ -18,4 +18,7 @@ export default defineConfig({
       '/auth': {
         target: 'http://localhost:3000',
         changeOrigin: true,
- 
+      },
+    },
+  },
+}); 

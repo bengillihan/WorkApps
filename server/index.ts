@@ -127,7 +127,7 @@ app.post("/api/calendar/settings", isAuthenticated, async (req: any, res) => {
 // Serve static files in production
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("dist/client"));
-  app.get("*", (req, res) => {
+  app.get("*", (_req, res) => {
     res.sendFile("dist/client/index.html", { root: process.cwd() });
   });
 }
